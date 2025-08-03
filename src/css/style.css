@@ -22,8 +22,7 @@ body {
     font-family: 'Poppins';
     background-color: var(--primary-color-light);
     color: var(--text-color);
-    overflow: hidden;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 header {
