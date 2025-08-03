@@ -26,8 +26,8 @@
                 <h2>Weather Information</h2>
                 <div class="input-group">
                     <input type="text" id="city-input" placeholder="" class="city-input" name="city" required>
-                    <label class="label-city" for="city">Enter city name</label>
-                    <button type="submit" class="search-btn"><img src="./src/img/search.png" alt=""></button>
+                    <label class="label-city" for="city" id="search">Enter city name</label>
+                    <button type="submit" class="search-btn" id="btn-search"><img src="./src/img/search.png" alt=""></button>
                 </div>
             </form>
 
@@ -35,15 +35,23 @@
 
             <div class="information-container">
                 <div class="weather-info">
-                    <h3 id="city-name" style="text-align: center;">City Name</h3>
+                    <div class="main-info">
+                        <img src="./src/img/cloudy.png" alt="cloudy" class="main-info-ico" id="weather-icon">
+                        <h2 class="current-temp" id="temperature-current"> --ºC</h2>
+                        <div class="main-info-text">
+                            <h3 id="city-name" style="text-align: center;">--</h3>
+                            <p id="city-weather-info">--</p>
+
+                        </div>
+                    </div>
                     <div class="information-dual-column">
                         <div class="info-column">
-                            <p id="temperature"><img src="./src/img/temperature-list.png" alt="thermometer" class="temperature-ico"> -- °C</p>
-                            <p id="description"><img src="./src/img/windsock.png" alt="Windsock" class="windsock-ico"> --</p>
+                            <p><img src="./src/img/temperature-up.png" alt="thermometer" class="temperature-ico"><span id="temperature-max"> -- °C</span> </p>
+                            <p><img src="./src/img/temperature-down.png" alt="cloud-showers-heavy" class="cloud-showers-heavy-ico"><span id="temperature-min"> -- %</span></p>
                         </div>
                         <div class="info-column">
-                            <p id="humidity"><img src="./src/img/raindrops.png" alt="raindrops" class="raindrops-ico"> -- %</p>
-                            <p id="wind-speed"><img src="./src/img/wind.png" alt="wind" class="wind-ico"> -- m/s</p>
+                            <p><img src="./src/img/raindrops.png" alt="raindrops" class="raindrops-ico"><span id="humidity"> -- %</span></p>
+                            <p><img src="./src/img/wind.png" alt="wind" class="wind-ico"><span id="wind-speed"> -- m/s</span></p>
                         </div>
                     </div>
                 </div>
@@ -55,6 +63,8 @@
     <div class="error-message" id="error-message" style="display: none;">
         <p>City not found. Please try again.</p>
     </div>
+
+<script src="./src/js/script.js"></script>
 </body>
 
 </html>
