@@ -45,7 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 valueSearch.value = "";
             })
             .catch(error => {
-                console.error('Error:', error);
+                showError('City not found. Please try again.');
             });
     };
+
+    function showError(message) {
+        const errorDiv = document.getElementById('error-message');
+        errorDiv.innerHTML = `<p>${message}</p>`;
+        errorDiv.classList.add('show');
+
+        // Hide the error message after 3 seconds
+        setTimeout(() => {
+            errorDiv.classList.remove('show');
+        }, 3000);
+    }
 });
