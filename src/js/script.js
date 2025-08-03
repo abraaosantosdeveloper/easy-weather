@@ -1,3 +1,5 @@
+import config from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     let valueSearch = document.getElementById("city-input");
     let cityName = document.getElementById('city-name');
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    let appId = "fa4c23cda0f8bcdac94a75301adc94a7";
+    let appId = config.apiKey;
     let baseUrl = "https://api.openweathermap.org/data/2.5/weather";
 
     const searchWeather = () => {
