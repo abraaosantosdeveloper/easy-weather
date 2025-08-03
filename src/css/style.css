@@ -23,7 +23,7 @@ body {
     background-color: var(--primary-color-light);
     color: var(--text-color);
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 header {
@@ -343,7 +343,6 @@ header {
     .form-container {
         width: 95%;
         height: auto;
-        min-height: calc(88vh - 4vh);
         padding: 15px;
         transform: scale(0.98);
         display: flex;
