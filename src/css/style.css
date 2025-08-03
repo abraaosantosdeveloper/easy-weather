@@ -45,10 +45,9 @@ header {
 }
 
 .logo-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
 }
-
 .logo-label>p {
     font-weight: 400;
     color: var(--secondary-color);
@@ -85,7 +84,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .current-temp {
@@ -323,7 +321,7 @@ header {
 @media (max-width: 900px) {
     header {
         justify-content: center;
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
 }
 
@@ -343,14 +341,10 @@ header {
         width: 95%;
         height: auto;
         padding: 15px;
-        transform: scale(0.98);
         display: flex;
         flex-direction: column;
     }
 
-    .weather-form {
-        margin-bottom: 10px;
-    }
 
     .main-info {
         width: 100%;
@@ -379,7 +373,6 @@ header {
 
     .weather-form > h2 {
         font-size: 18px;
-        margin: 5px auto;
     }
 
     .main-info {
@@ -442,9 +435,6 @@ header {
 }
 
 @media (max-width: 350px) {
-    .form-container {
-        transform: scale(0.9);
-    }
 
     .weather-form > h2 {
         font-size: 18px;
@@ -457,16 +447,15 @@ header {
 
 @media (max-height: 700px) {
     header {
-        height: 10vh;
+        height: 12vh;
     }
 
     .container {
-        height: 90vh;
+        height: 88vh;
         padding: 1vh 0;
     }
 
     .form-container {
-        transform: scale(0.95);
         padding: 10px 15px;
     }
 
