@@ -18,8 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    let appId = "fa4c23cda0f8bcdac94a75301adc94a7";
-    let baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+    // Usando variável de ambiente do Vite
+    const appId = import.meta.env.VITE_OPENWEATHER_API_KEY;
+    const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+
+    // Validação da API Key
+    if (!appId) {
+        console.error('API Key não configurada! Configure VITE_OPENWEATHER_API_KEY no arquivo .env');
+        showError('Configuration error. Please contact the administrator.');
+        return;
+    }
 
     const searchWeather = () => {
         const url = `${baseUrl}?q=${valueSearch.value}&units=metric&appid=${appId}`;
