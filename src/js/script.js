@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    
     // Usando variável de ambiente do Vite
     const appId = import.meta.env.VITE_OPENWEATHER_API_KEY;
     const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
